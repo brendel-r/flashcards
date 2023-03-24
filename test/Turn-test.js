@@ -12,22 +12,27 @@ describe('Turn', function() {
     guess = 'object';
     turn = new Turn(guess, card);
   });
+  
   it('should be a function', function() {
     expect(Turn).to.be.a('function');
   });
+  
   it('should be an instance of Turn', function() {
     expect(turn).to.be.an.instanceOf(Turn);
   });
+  
   it('should return a player guess', function() {
     turn.returnGuess();
 
     expect(turn.returnGuess()).to.equal(turn.guess);
   });
+  
   it('should return the card being played', function() {
     turn.returnCard();
 
     expect(turn.returnCard()).to.equal(card);
   });
+  
   it('should evaluate player guess', function() {
     turn.evaluateGuess();
 
@@ -38,6 +43,7 @@ describe('Turn', function() {
 
     expect(turn1.evaluateGuess()).to.equal(false);
   });
+  
   it('should give appropriate feedback in correlation with evaluation', function() {
     turn.giveFeedback();
 

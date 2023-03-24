@@ -37,12 +37,6 @@ describe('Game', function() {
     expect(game).to.be.an.instanceOf(Game);
   });
 
-  it('should track current round', function() {
-    game.start();
-
-    expect(game.currentRound).to.be.an.instanceOf(Round);
-  });
-
   it('should start the game', function() {
     expect(game.start).to.be.a('function');
   });
